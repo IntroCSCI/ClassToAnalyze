@@ -26,6 +26,7 @@ grid::grid()
       }
       space[r][c]=i;
     }
+    message = "";
 }
 
 
@@ -68,9 +69,8 @@ int grid::size()
   return gsize;
 }
 
-string grid::getPlanet(int pguess) //i assign 1-6 for each planet.
+void grid::getPlanet(int pguess) //i assign 1-6 for each planet.
 {
-  string message;
   if (pguess == 1)
   {
     message = "You have discovered Earth! Location of the Time Stone.\n";
@@ -95,7 +95,6 @@ string grid::getPlanet(int pguess) //i assign 1-6 for each planet.
   {
     message =  "You have discovered Asgard! Location of the Soul Stone.\n";
   }
-  return message;
 }
 
 int grid::getSpot(int r, int c)

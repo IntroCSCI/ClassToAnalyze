@@ -10,12 +10,13 @@ class grid
   private:
     int space [8][8];
     int gsize;
+    string message;
 
   public:
     grid();
     void printGrid();
     int size();
-    string getPlanet(int pguess);
+    void getPlanet(int pguess);
     int getSpot(int r, int c);
 };
 
